@@ -1,0 +1,13 @@
+<h1>Billboard Charts</h1>
+<hr />
+
+<%= link_to 'Add Billboard', new_billboard_path %> 
+<%= link_to 'Artist', artists_path %>
+
+<br />
+<ul>
+<% @billboards.each do |billboard| %>
+    <li>
+    <%= link_to billboard.title, billboard_path(billboard) %>
+    </li>
+<% end %>
